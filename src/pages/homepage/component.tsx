@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { MissionCard } from '../../components/MissionCard/component'
 import { getMissions } from '../../services/spacex'
+
 export const Homepage = () => {
   const [missions, setMissions] = useState<any>([])
 
@@ -17,13 +19,8 @@ export const Homepage = () => {
   }, [])
 
   const mappedMissions = missions.map((mission: any) => {
-    return (
-      <div key={mission.id} className="bg-gray-900 text-white">
-        <p>Mission name: {mission.name}</p>
-        <p>Description: {mission.description}</p>
-      </div>
-    )
+    return <MissionCard key={mission.id} mission={mission} />
   })
 
-  return <div>{mappedMissions}</div>
+  return <div className="flex flex-col max-w-xl">{mappedMissions}</div>
 }

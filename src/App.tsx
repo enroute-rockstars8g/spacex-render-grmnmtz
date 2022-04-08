@@ -2,7 +2,11 @@
 import { Homepage } from './pages/homepage/component'
 
 function App() {
-  return <Homepage />
+  return (
+    <div className="bg-gray-900 flex">
+      <Homepage />
+    </div>
+  )
 }
 
 export default App

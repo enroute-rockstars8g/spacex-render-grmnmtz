@@ -1,7 +1,7 @@
 export const DragonCard = ({ dragon }: { dragon: any }) => {
   return (
     <div key={dragon.id} className="bg-gray-800 text-white p-8 m-4 ">
-      <div className="text-4xl py-4 text-blue-300 font-bold">
+      <div className="text-4xl py-4 text-sky-600 font-bold">
         <p>{dragon.name}</p>
       </div>
       <p className="py-2">Description:</p>

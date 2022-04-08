@@ -2,7 +2,7 @@ export const MissionCard = ({ mission }: { mission: any }) => {
   return (
     <div key={mission.id} className="bg-gray-800 text-white p-8 m-4 ">
       <div className="text-4xl py-4 font-bold">
-        <p className="text-blue-300">Mission name: {mission.name}</p>
+        <p className="text-sky-600">{mission.name}</p>
       </div>
       <p>Description: {mission.description}</p>
       <div className="py-4">

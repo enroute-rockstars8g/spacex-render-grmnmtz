@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { MissionCard } from '../../components/MissionCard/component'
 import { getMissions } from '../../services/spacex'
 
-export const Homepage = () => {
+export const ShipsPage = () => {
   const [missions, setMissions] = useState<any>([])
 
   useEffect(() => {

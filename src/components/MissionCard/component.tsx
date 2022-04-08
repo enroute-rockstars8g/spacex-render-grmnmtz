@@ -2,11 +2,11 @@ export const MissionCard = ({ mission }: { mission: any }) => {
   return (
     <div key={mission.id} className="bg-gray-800 text-white p-8 m-4 ">
       <div className="text-4xl py-4 font-bold">
-        <p>Mission name: {mission.name}</p>
+        <p className="text-blue-300">Mission name: {mission.name}</p>
       </div>
       <p>Description: {mission.description}</p>
       <div className="py-4">
-        <p className="py-4 text-2xl font-semibold">Manufacturers:</p>
+        <p className="py-4 text-2xl font-bold">Manufacturers:</p>
         {mission.manufacturers.map((manufacturer: any) => (
           <p key={`${mission.id}-${manufacturer}`}>{manufacturer}</p>
         ))}

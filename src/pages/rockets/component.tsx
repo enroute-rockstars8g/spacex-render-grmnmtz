@@ -24,8 +24,6 @@ export const RocketsPage = () => {
     get()
   }, [])
 
-  console.log(rockets)
-
   const mappedRockets = rockets.map((rocket: any) => (
     <RocketCard key={rocket.id} rocket={rocket} />
   ))

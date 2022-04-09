@@ -1,8 +1,15 @@
 export const RocketCard = ({ rocket }: { rocket: any }) => {
+  const classes = {
+    rocketContainer: 'bg-gray-800 text-white p-8 m-4 ',
+    titleContainer: 'text-4xl py-4 font-bold',
+    rocketName: 'text-sky-600',
+    websiteLink: 'text-blue-300',
+  }
+
   return (
-    <div key={rocket.id} className="bg-gray-800 text-white p-8 m-4 ">
-      <div className="text-4xl py-4 font-bold">
-        <p className="text-sky-600">{rocket.name}</p>
+    <div key={rocket.id} className={classes.rocketContainer}>
+      <div className={classes.titleContainer}>
+        <p className={classes.rocketName}>{rocket.name}</p>
       </div>
       <p>Description: {rocket.description}</p>
       <div className="py-4">
@@ -21,7 +28,7 @@ export const RocketCard = ({ rocket }: { rocket: any }) => {
       <div className="py-4">
         <span className="pr-2">
           {' '}
-          <a className="text-blue-300" href={rocket.wikipedia}>
+          <a className={classes.websiteLink} href={rocket.wikipedia}>
             Wikipedia
           </a>
         </span>

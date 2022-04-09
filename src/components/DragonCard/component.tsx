@@ -1,7 +1,13 @@
 export const DragonCard = ({ dragon }: { dragon: any }) => {
+  const classes = {
+    dragonContainer: 'bg-gray-800 text-white p-8 m-4 ',
+    dragonName: 'text-4xl py-4 text-sky-600 font-bold',
+    websiteLink: 'text-blue-300',
+  }
+
   return (
-    <div key={dragon.id} className="bg-gray-800 text-white p-8 m-4 ">
-      <div className="text-4xl py-4 text-sky-600 font-bold">
+    <div key={dragon.id} className={classes.dragonContainer}>
+      <div className={classes.dragonName}>
         <p>{dragon.name}</p>
       </div>
       <p className="py-2">Description:</p>
@@ -21,7 +27,7 @@ export const DragonCard = ({ dragon }: { dragon: any }) => {
       <div>
         <span className="pr-2">
           {' '}
-          <a className="text-blue-300" href={dragon.wikipedia}>
+          <a className={classes.websiteLink} href={dragon.wikipedia}>
             Wikipedia
           </a>
         </span>

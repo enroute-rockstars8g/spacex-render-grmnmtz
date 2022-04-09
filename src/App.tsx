@@ -5,7 +5,7 @@ function App() {
   const classes = {
     navLink: 'text-3xl text-gray-300 px-8',
     navContainer: 'border-b-4 p-4 border-sky-700 ',
-    mainWrapper: 'bg-gray-900 m-auto',
+    mainWrapper: 'bg-gray-900 m-auto min-h-screen',
   }
 
   return (

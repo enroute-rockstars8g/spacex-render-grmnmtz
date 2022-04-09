@@ -39,6 +39,8 @@ export const MissionsPage = () => {
   return !isError && isLoading ? (
     <LoadingMessage />
   ) : (
-    <div className="flex flex-col max-w-xl">{mappedMissions}</div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 ">
+      {mappedMissions}
+    </div>
   )
 }

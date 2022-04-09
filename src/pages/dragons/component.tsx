@@ -39,6 +39,8 @@ export const DragonsPage = () => {
   return !isError && isLoading ? (
     <LoadingMessage />
   ) : (
-    <div className="flex flex-col max-w-xl text-white">{mappedDragons}</div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 text-white">
+      {mappedDragons}
+    </div>
   )
 }
